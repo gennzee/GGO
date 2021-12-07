@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - OneWayPlatform
+  - PlayerFoot
+  - Skill
+  - MonsterFoot
+  - Monster
+  - Item
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Minimap
+  - PlayerFoot
+  - MonsterFoot
+  - Player
+  - Monster
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Platforms
+    uniqueID: 2301962917
+    locked: 0
+  - name: Mobs
+    uniqueID: 1075719125
+    locked: 0
+  - name: Skills
+    uniqueID: 14091399
+    locked: 0
+  - name: Player
+    uniqueID: 1379105421
+    locked: 0
+  - name: Equipment
+    uniqueID: 2197832533
+    locked: 0
+  - name: FloatingDamage
+    uniqueID: 2678877395
+    locked: 0
+  - name: UI
+    uniqueID: 1613791179
+    locked: 0
