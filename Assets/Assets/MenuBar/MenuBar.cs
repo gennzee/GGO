@@ -10,8 +10,6 @@ public class MenuBar : MonoBehaviour
     private GameObject closeMenuBarButton;
     [SerializeField]
     private GameObject menuBar;
-    [SerializeField]
-    private GameObject inventory;
 
     public void ToggleMenuBar()
     {
@@ -37,19 +35,5 @@ public class MenuBar : MonoBehaviour
         openMenuBarButton.SetActive(true);
         closeMenuBarButton.SetActive(false);
         menuBar.SetActive(false);
-    }
-
-    public void ToggleInventory()
-    {
-        if (inventory.activeSelf)
-        {
-            inventory.SetActive(false);
-        }
-        else
-        {
-            inventory.SetActive(true);
-            CloseMenuBar();
-        }
-
     }
 }

@@ -23,9 +23,6 @@ public abstract class Character : Common
     protected Rigidbody2D rigidbody2D;
     protected Animator animator;
 
-    [SerializeField]
-    protected GameObject existSpellPoint;
-
     protected virtual void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
