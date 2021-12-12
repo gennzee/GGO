@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerOneWayPlatformBehavior : MonoBehaviour
-{    
-    [SerializeField]
-    private VariableJoystick joystick;
+{
     [SerializeField]
     private float waiting;
 

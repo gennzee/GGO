@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Mirror;
 
 public class UIManager : MonoBehaviour
 {
@@ -46,5 +47,19 @@ public class UIManager : MonoBehaviour
     private void ActionButtonOnclick(int buttonInx)
     {
         buttons[buttonInx].onClick.Invoke();
+    }
+
+    public void Jump_Player()
+    {
+        NetworkClient.localPlayer.gameObject.GetComponent<PlayerBehavior>().Jump();
+    }
+
+    public void Chat_Npc()
+    {
+        GameObject npc = NetworkClient.localPlayer.gameObject.GetComponent<PlayerBehavior>().NpcInteraction;
+        if (npc != null)
+        {
+            npc.GetComponent<NPC>().Interact();
+        }
     }
 }

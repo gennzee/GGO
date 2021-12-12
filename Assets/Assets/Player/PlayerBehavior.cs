@@ -8,16 +8,29 @@ public class PlayerBehavior : Character
     private PlayerOneWayPlatformBehavior playerOneWayPlatformBehavior;
     
     [Space]
-    [SerializeField]
     private VariableJoystick joystick;
     [SerializeField]
     private float joystickDeadZone;
     [SerializeField]
     private InputDevice inputDevice;
     private enum InputDevice { PC, Mobile }
+
+    private GameObject currentInteractionWithNpc;
+    public GameObject NpcInteraction
+    {
+        get
+        {
+            return currentInteractionWithNpc;
+        }
+        set
+        {
+            currentInteractionWithNpc = value;
+        }
+    }
     // Start is called before the first frame update
     protected override void Start()
     {
+        joystick = GameObject.Find("Variable Joystick").GetComponent<VariableJoystick>();
         gearSocket = GetComponentsInChildren<GearSocket>();
         playerOneWayPlatformBehavior = GetComponentInChildren<PlayerOneWayPlatformBehavior>();
         base.Start();
@@ -25,6 +38,8 @@ public class PlayerBehavior : Character
     // Update is called once per frame
     protected override void Update()
     {
+        if (!isLocalPlayer) return;
+
         horizontal = GetRawAxisInput("Horizontal");
         vertical = GetRawAxisInput("Vertical");
         if (!isAttacking) HandleMovement();

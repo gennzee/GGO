@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Mirror;
 using UnityEngine;
 
-public abstract class Common : MonoBehaviour
+public abstract class Common : NetworkBehaviour
 {
     protected enum State
     {

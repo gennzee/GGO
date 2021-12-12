@@ -13,5 +13,6 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = maxFps;
         Physics2D.IgnoreLayerCollision(7, 8, true); //8: MonsterFoot, 7: Player Foot
         Physics2D.IgnoreLayerCollision(7, 11, true); //7: Player Foot, 11: NPC
+        Physics2D.IgnoreLayerCollision(7, 7, true); //7: Player Foot, 7: Player Foot
     }
 }
